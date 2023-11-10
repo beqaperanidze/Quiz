@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +6,7 @@ import java.awt.event.ActionListener;
 public class Quiz extends JFrame implements ActionListener {
 
     private final String[] questions = {"What is the capital of France?", "What is the largest planet in our solar system?", "What is the smallest country in the world by land area?"};
-    private final String[][] options = {{"Paris", "London", "Berlin", "Madrid"}, {"Jupiter", "Saturn", "Uranus", "Neptune"}, {"Vatican City", "Monaco", "Nauru", "Tuvalu"}};
+    private final String[][] options = {{"Paris", "London", "Berlin", "Madrid"}, {"Saturn", "Jupiter", "Uranus", "Neptune"}, {"Monaco", "Nauru", "Tuvalu", "Vatican City"}};
     private final String[] answers = {"Paris", "Jupiter", "Vatican City"};
     private final int totalQuestions = questions.length;
     private int currentQuestion = 0;
@@ -20,7 +19,6 @@ public class Quiz extends JFrame implements ActionListener {
     private final JButton buttonD = new JButton();
     private final JButton submitButton = new JButton("Submit");
     private final JButton nextButton = new JButton("Next");
-    private final JLabel scoreLabel = new JLabel();
 
     Quiz() {
 
