@@ -30,7 +30,7 @@ public class Quiz extends JFrame implements ActionListener {
 
         JPanel panelQuestion = new JPanel();
         panelQuestion.setLayout(new BorderLayout());
-        panelQuestion.setBackground(Color.white);
+        panelQuestion.setBackground(new Color(214, 184, 219));
         panelQuestion.setPreferredSize(new Dimension(1920, 400));
         panelQuestion.add(question);
 
@@ -90,23 +90,23 @@ public class Quiz extends JFrame implements ActionListener {
         this.setVisible(false);
         JLabel label = new JLabel();
         label.setText("Your score is " + correctAnswers + " out of " + totalQuestions);
-        label.setFont(new Font(" ",Font.BOLD, 30));
+        label.setFont(new Font(" ", Font.BOLD, 30));
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
         label.setHorizontalTextPosition(JLabel.CENTER);
         label.setVerticalTextPosition(JLabel.TOP);
 
-        if(correctAnswers == 0){
+        if (correctAnswers == 0) {
             label.setIcon(icon0);
-        }else if(correctAnswers == 1){
+        } else if (correctAnswers == 1) {
             label.setIcon(icon1);
-        }else if (correctAnswers == 2){
+        } else if (correctAnswers == 2) {
             label.setIcon(icon2);
-        }else label.setIcon(icon3);
+        } else label.setIcon(icon3);
 
         JFrame frame = new JFrame();
         frame.add(label);
-        frame.setSize(800,800);
+        frame.setSize(800, 800);
         frame.setTitle("Result");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
